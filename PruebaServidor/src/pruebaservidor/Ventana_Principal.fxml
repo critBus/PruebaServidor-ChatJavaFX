@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../../../ReneFX/src/Utiles/FX/CSS/css.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pruebaservidor.Ventan_PrincipalController">
+   <children>
+      <SplitPane dividerPositions="0.15577889447236182, 0.8115577889447236" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="transparente" stylesheets="@../../../ReneFX/src/Utiles/FX/CSS/css.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+         <AnchorPane fx:id="PAnchorSuperior" prefHeight="202.0" prefWidth="598.0" styleClass="transparente">
+               <children>
+                   <JFXButton fx:id="BCerrar" alignment="CENTER" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="514.0" layoutY="7.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="7.0">
+                     <graphic>
+                        <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BMinimizar" contentDisplay="GRAPHIC_ONLY" layoutX="407.0" layoutY="11.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="10.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BMazimizar" contentDisplay="GRAPHIC_ONLY" layoutX="474.0" layoutY="11.0" onAction="#apretoMazimizar" styleClass="botomTrasparente" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="11.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="WINDOW_MAXIMIZE" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BClearTodo" contentDisplay="GRAPHIC_ONLY" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoClearTodo" styleClass="botomTrasparente" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <EmojiOneView glyphName="SKULL_CROSSBONES" size="27.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BActualizarTodo" contentDisplay="GRAPHIC_ONLY" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoActualizarTodo" styleClass="botomTrasparente" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="25.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <Text fill="#fcf5f5" layoutX="28.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Servidor">
+                     <font>
+                        <Font name="Curlz MT" size="39.0" />
+                     </font>
+                  </Text>
+               
+               </children></AnchorPane>   <StackPane prefHeight="0.0" prefWidth="598.0">
+               <children>
+                  <TextArea fx:id="TA" prefHeight="200.0" prefWidth="200.0" />
+               </children></StackPane>
+          <AnchorPane fx:id="PAnchorInferior" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTextField fx:id="TEnviar" layoutX="82.0" layoutY="24.0" prefHeight="25.0" prefWidth="254.0" styleClass="JFXtextFielTextoBlanco" />
+                  <JFXButton fx:id="BEnviar" layoutX="358.0" layoutY="24.0" onAction="#apretoBEnviar" styleClass="botomGrisOscuro" text="Enviar" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
